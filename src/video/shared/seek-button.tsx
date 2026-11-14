@@ -71,9 +71,9 @@ export function SeekButton({
         seconds={seconds}
       >
         {backward ? (
-          <Rewind10FigmaIcon className={cn('w-[13.8px] h-[16.9px] max-sm:w-[15px] max-sm:h-[18.4px] text-white', iconClassName)} />
+          <Rewind10FigmaIcon className={cn('col-start-1 row-start-1 w-[13.8px] h-[16.9px] max-sm:w-[15px] max-sm:h-[18.4px] text-white', iconClassName)} />
         ) : (
-          <Forward10FigmaIcon className={cn('w-[13.8px] h-[16.9px] max-sm:w-[15px] max-sm:h-[18.4px] text-white', iconClassName)} />
+          <Forward10FigmaIcon className={cn('col-start-1 row-start-1 w-[13.8px] h-[16.9px] max-sm:w-[15px] max-sm:h-[18.4px] text-white', iconClassName)} />
         )}
       </SeekButtonPrimitive>
     </ButtonTooltip>

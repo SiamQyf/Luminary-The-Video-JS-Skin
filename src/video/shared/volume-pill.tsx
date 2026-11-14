@@ -387,7 +387,6 @@ export function VolumePill({ className }: { className?: ClassValue }) {
           'backdrop-blur-[12px] backdrop-saturate-[150%] backdrop-brightness-[108%]',
           // Smooth transition
           'transition-[width,padding] duration-300 ease-out',
-          'before:rounded-[inherit] after:rounded-[inherit]',
           className
         )}
         data-name="Volume Pill"
@@ -401,17 +400,17 @@ export function VolumePill({ className }: { className?: ClassValue }) {
               armActiveTimer();
             }
           }}
-          className="relative z-10 size-[31.4px] shrink-0 grid place-items-center p-0 m-0 border-none! bg-transparent! shadow-none! cursor-pointer text-white group/mute outline-none rounded-[inherit] overflow-hidden"
+          className="relative z-10 size-[31.4px] shrink-0 flex items-center justify-center p-0 m-0 border-none! bg-transparent! shadow-none! cursor-pointer text-white group/mute outline-none rounded-[inherit] overflow-hidden leading-none"
         >
           <span
             className={cn(
-              'player-icon-scale relative z-10 size-full grid grid-cols-1 grid-rows-1 place-items-center text-white pointer-events-none transition-transform duration-500 ease-out rounded-[inherit]',
+              'player-icon-scale relative z-10 size-full grid grid-cols-1 grid-rows-1 place-items-center text-white pointer-events-none transition-transform duration-500 ease-out rounded-[inherit] p-0 m-0 leading-none',
               isFullscreen ? 'scale-[0.92]!' : 'scale-[0.86]!'
             )}
           >
             <VolumeHornAnimatedIcon
               isDancing={isActive || isDragging || isVerticalOpen}
-              className="size-[15px] text-white"
+              className="col-start-1 row-start-1 size-[15px] text-white block m-auto"
             />
           </span>
         </MuteButtonPrimitive>
@@ -439,7 +438,7 @@ export function VolumePill({ className }: { className?: ClassValue }) {
             </VolumeSlider.Track>
             <VolumeSlider.Thumb
               className={cn(
-                'volume-slider-thumb absolute top-1/2 left-[var(--media-slider-fill,100%)] size-[7px] rounded-full pointer-events-none',
+                'volume-slider-thumb absolute top-1/2 -translate-x-1/2 -translate-y-1/2 left-[var(--media-slider-fill,100%)] size-[7px] rounded-full pointer-events-none',
                 'group-has-[[data-dragging]]/vol-pill:left-[var(--media-slider-pointer)]',
                 'outline-none'
               )}
