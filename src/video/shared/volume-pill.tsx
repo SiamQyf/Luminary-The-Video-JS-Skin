@@ -400,17 +400,17 @@ export function VolumePill({ className }: { className?: ClassValue }) {
               armActiveTimer();
             }
           }}
-          className="relative z-10 size-[31.4px] shrink-0 flex items-center justify-center p-0 m-0 border-none! bg-transparent! shadow-none! cursor-pointer text-white group/mute outline-none rounded-[inherit] overflow-hidden leading-none"
+          className="relative z-10 size-[31.4px] shrink-0 grid place-items-center p-0 m-0 border-none bg-transparent cursor-pointer text-white group/mute outline-none"
         >
           <span
             className={cn(
-              'player-icon-scale relative z-10 size-full grid grid-cols-1 grid-rows-1 place-items-center text-white pointer-events-none transition-transform duration-500 ease-out rounded-[inherit] p-0 m-0 leading-none',
+              'player-icon-scale relative z-10 size-full grid grid-cols-1 grid-rows-1 place-items-center text-white pointer-events-none transition-transform duration-500 ease-out',
               isFullscreen ? 'scale-[0.92]!' : 'scale-[0.86]!'
             )}
           >
             <VolumeHornAnimatedIcon
               isDancing={isActive || isDragging || isVerticalOpen}
-              className="col-start-1 row-start-1 size-[15px] text-white block m-auto"
+              className="size-[15px] text-white"
             />
           </span>
         </MuteButtonPrimitive>
@@ -438,7 +438,7 @@ export function VolumePill({ className }: { className?: ClassValue }) {
             </VolumeSlider.Track>
             <VolumeSlider.Thumb
               className={cn(
-                'volume-slider-thumb absolute top-1/2 -translate-x-1/2 -translate-y-1/2 left-[var(--media-slider-fill,100%)] size-[7px] rounded-full pointer-events-none',
+                'volume-slider-thumb absolute top-1/2 left-[var(--media-slider-fill,100%)] size-[7px] rounded-full pointer-events-none',
                 'group-has-[[data-dragging]]/vol-pill:left-[var(--media-slider-pointer)]',
                 'outline-none'
               )}

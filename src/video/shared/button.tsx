@@ -40,7 +40,7 @@ export function Button({ className, children, ...props }: ButtonProps) {
   return (
     <button
       className={cn(
-        'relative group/liquid-btn flex items-center justify-center size-[31.4px] shrink-0 cursor-pointer rounded-full p-0 m-0 text-white overflow-hidden isolate select-none border-none outline-none leading-none',
+        'relative group/liquid-btn grid size-[31.4px] shrink-0 cursor-pointer place-items-center rounded-full p-0 text-white overflow-hidden isolate select-none border-none outline-none',
         // Static high-translucency dark liquid glass base
         'bg-black/20',
         // Luminous transparent liquid glass sheen (refined for high translucency)
@@ -54,8 +54,7 @@ export function Button({ className, children, ...props }: ButtonProps) {
         // Tactile scale
         'hover:scale-105 active:scale-95 transition-transform duration-150 ease-out',
         'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white',
-        'pointer-coarse:before:content-[\'\'] pointer-coarse:before:absolute pointer-coarse:before:-inset-[6px] pointer-coarse:before:rounded-[inherit] pointer-coarse:before:pointer-events-auto',
-        'pointer-fine:before:hidden pointer-fine:before:content-none',
+        "pointer-coarse:before:absolute pointer-coarse:before:-inset-[6px] pointer-coarse:before:content-['']",
         'aria-disabled:cursor-not-allowed aria-disabled:opacity-40 disabled:cursor-not-allowed disabled:opacity-40',
         'data-hidden:hidden',
         className
@@ -65,7 +64,7 @@ export function Button({ className, children, ...props }: ButtonProps) {
       {/* Centered icon layer covering full button grid cell with non-directional soft ambient drop shadow: scaled down slightly for refined padding */}
       <span
         className={cn(
-          'player-icon-scale relative z-10 size-full grid grid-cols-1 grid-rows-1 place-items-center text-white pointer-events-none transition-transform duration-500 ease-out rounded-[inherit] p-0 m-0 leading-none',
+          'player-icon-scale relative z-10 size-full grid grid-cols-1 grid-rows-1 place-items-center text-white pointer-events-none transition-transform duration-500 ease-out',
           isFullscreen ? 'scale-[0.92]!' : 'scale-[0.86]!'
         )}
       >
